@@ -9,7 +9,7 @@ import Whitelogo from "../../assets/image/CatsWhiteLogo.png"
 import { FcBusinessman } from "react-icons/fc";
 import { Outlet } from "react-router-dom";
 
-// import './Navbar.css';
+import './LayoutOne.css';
 
 export default function Layout() {
     const [windowSize, setWindowSize] = useState({
@@ -83,7 +83,7 @@ export default function Layout() {
                         {/* <CustomizedSwitches onChange={onChangeSwitch} checked={checked} /> */}
                         <Tooltip title="Notification" arrow>
                             <Badge
-                                badgecontent={100}
+                                badgeContent={100}
                                 sx={{
                                     "& .MuiBadge-badge": {
                                         color: "white",

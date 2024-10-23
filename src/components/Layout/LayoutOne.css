@@ -1,0 +1,191 @@
+.iconProfile {
+  font-size: 16px;
+  color: 'red';
+}
+
+.layoutbody {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  max-height: 100%;
+  overflow-y: auto;
+  z-index: 100;
+}
+.row {
+  display: flex;
+  height: 100%;
+  max-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  text-align: left;
+  font-size: 24px;
+  background-color: #E5E5E5;
+  z-index: 10;
+}
+
+.headerDark {
+  width: 100%;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  text-align: left;
+  font-size: 24px;
+  background-color: #535353;
+  /* background-color: #0B2948; */
+  z-index: 10;
+  transition: 0s;
+}
+
+.logo {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  width: 102px;
+  height: 44px;
+  object-fit: cover;
+}
+
+.billingManagementSystem {
+  position: absolute;
+  top: 28.33%;
+  left: 150px;
+  font-family: Inter;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1b0c80;
+}
+.billingManagementSystemDark {
+  position: absolute;
+  top: 28.33%;
+  left: 150px;
+  font-family: Inter;
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* .main {
+  width: 100%;
+  max-height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
+  overflow: auto;
+  padding: 20px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+.profile {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  margin-right: 30px;
+}
+
+.profile-name {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.profile-name-dark {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.sidebar-btn {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.btn-light {
+  background-color: #F5F5F5;
+  width: 100%;
+}
+
+.btn-dark {
+  background-color: #E0E0E0;
+  width: 100%;
+}
+
+
+.footer {
+  background-color: #F5F5F5;
+  padding: 9px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.parent-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-date {
+  display: flex;
+  align-items: center;
+}
+
+.calendarDate {
+  width: 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 10px
+}
+.layoutbody .row .menu svg{
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.card-icon svg{
+  height: 1em;
+  width: 1em;
+}
+
+
+.bk-icon{
+  background-color: #FFD05B;
+  border-radius: 25px;
+  padding: 2px;
+}
+
+.bk-icon-blue{
+  background-color: #386895;
+  border-radius: 25px;
+  padding: 2px;
+}
+
+/* #header-light .ps-menu-icon{
+  background-color: #DDE6ED;
+  border-radius: 3px;
+} */
+/* background-color: #dfdfdf; */
+
+/* #header-dark .ps-menu-icon{
+  background-color: #C7C8CC;
+  border-radius: 3px;
+} */

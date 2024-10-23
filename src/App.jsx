@@ -41,6 +41,7 @@ function App() {
 
   return (
     <>
+    {/* <Layout/> */}
       <BrowserRouter basename="/">
             <Routes>
               <Route path="/" element={<Navigate to="/home" />} />
