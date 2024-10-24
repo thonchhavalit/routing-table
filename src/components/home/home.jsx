@@ -1,6 +1,11 @@
-// import React from 'react';
-import { Table } from 'antd';
+import { InputAdornment, TextField } from '@mui/material';
+import { Input, Table } from 'antd';
 import { createStyles } from 'antd-style';
+import { DatePicker } from 'antd';
+import { useState } from 'react';
+import { SearchOutlined } from '@ant-design/icons';
+import ModalComponent from '../modal/Modal'; // Adjust the path as necessary
+
 const useStyle = createStyles(({ css, token }) => {
   const { antCls } = token;
   return {
@@ -18,164 +23,178 @@ const useStyle = createStyles(({ css, token }) => {
     `,
   };
 });
-const columns = [
-  {
-    title: 'Full Name',
-    width: 100,
-    dataIndex: 'name',
-    fixed: 'left',
-  },
-  {
-    title: 'Age',
-    width: 100,
-    dataIndex: 'age',
-  },
-  {
-    title: 'Column 1',
-    dataIndex: 'address',
-    key: '1',
-    fixed: 'left',
-  },
-  {
-    title: 'Column 2',
-    dataIndex: 'address',
-    key: '2',
-  },
-  {
-    title: 'Column 3',
-    dataIndex: 'address',
-    key: '3',
-  },
-  {
-    title: 'Column 4',
-    dataIndex: 'address',
-    key: '4',
-  },
-  {
-    title: 'Column 5',
-    dataIndex: 'address',
-    key: '5',
-  },
-  {
-    title: 'Column 6',
-    dataIndex: 'address',
-    key: '6',
-  },
-  {
-    title: 'Column 7',
-    dataIndex: 'address',
-    key: '7',
-  },
-  {
-    title: 'Column 8',
-    dataIndex: 'address',
-    key: '8',
-  },
-  {
-    title: 'Column 9',
-    dataIndex: 'address',
-    key: '9',
-  },
-  {
-    title: 'Column 10',
-    dataIndex: 'address',
-    key: '10',
-  },
-  {
-    title: 'Column 11',
-    dataIndex: 'address',
-    key: '11',
-  },
-  {
-    title: 'Column 12',
-    dataIndex: 'address',
-    key: '12',
-  },
-  {
-    title: 'Column 13',
-    dataIndex: 'address',
-    key: '13',
-  },
-  {
-    title: 'Column 14',
-    dataIndex: 'address',
-    key: '14',
-  },
-  {
-    title: 'Column 15',
-    dataIndex: 'address',
-    key: '15',
-  },
-  {
-    title: 'Column 16',
-    dataIndex: 'address',
-    key: '16',
-  },
-  {
-    title: 'Column 17',
-    dataIndex: 'address',
-    key: '17',
-  },
-  {
-    title: 'Column 18',
-    dataIndex: 'address',
-    key: '18',
-  },
-  {
-    title: 'Column 19',
-    dataIndex: 'address',
-    key: '19',
-  },
-  {
-    title: 'Column 20',
-    dataIndex: 'address',
-    key: '20',
-  },
-  {
-    title: 'Action 1',
-    fixed: 'right',
-    width: 90,
-    render: () => <a>action</a>,
-  },
-  {
-    title: 'Action 2',
-    width: 90,
-    render: () => <a>action</a>,
-  },
-  {
-    title: 'Action 3',
-    fixed: 'right',
-    width: 90,
-    render: () => <a>action</a>,
-  },
-];
-const dataSource = [
-  {
-    key: '1',
-    name: 'Olivia',
-    age: 32,
-    address: 'New York Park',
-  },
-  {
-    key: '2',
-    name: 'Ethan',
-    age: 40,
-    address: 'London Park',
-  },
-];
+
 const HomePage = () => {
+  const [open, setOpen] = useState(false);
+  const [date, setDate] = useState(null);
+  const [search, setSearch] = useState('');
+
+  const handleDateChange = (newDate) => {
+    setDate(newDate);
+  };
+
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const columns = [
+    {
+      title: 'CallSign',
+      width: 100,
+      dataIndex: 'name',
+      fixed: 'left',
+    },
+    {
+      title: 'AeroDep',
+      width: 100,
+      dataIndex: 'name',
+    },
+    {
+      title: 'AeroDes',
+      dataIndex: 'name',
+      key: '1',
+      fixed: 'left',
+    },
+    {
+      title: 'DOF',
+      dataIndex: 'age',
+      key: '2',
+    },
+    {
+      title: 'Est.Time',
+      dataIndex: 'age',
+      key: '3',
+    },
+    {
+      title: 'Aircraft',
+      dataIndex: 'address',
+      key: '4',
+    },
+    {
+      title: 'REG',
+      dataIndex: 'address',
+      key: '5',
+    },
+    {
+      title: 'Type',
+      dataIndex: 'address',
+      key: '6',
+    },
+    {
+      title: 'FlightType',
+      dataIndex: 'address',
+      key: '7', // Make sure keys are unique
+    },
+    {
+      title: 'Action 1',
+      fixed: 'right',
+      width: 90,
+      render: () => (
+        <a
+          onClick={() => setOpen(true)} // Open modal on click
+          style={{ backgroundColor: "lightgreen", padding: '0 5px', borderRadius: '5px' }}
+        >
+          decoded
+        </a>
+      ),
+    },
+  ];
+
+  const dataSource = [
+    {
+      key: '1',
+      name: 'Olivia',
+      age: 32,
+      address: 'New York Park',
+    },
+    {
+      key: '2',
+      name: 'Ethan',
+      age: 40,
+      address: 'London Park',
+    }, {
+      key: '2',
+      name: 'Ethan',
+      age: 40,
+      address: 'London Park',
+    }, {
+      key: '2',
+      name: 'Ethan',
+      age: 40,
+      address: 'London Park',
+    }, {
+      key: '2',
+      name: 'Ethan',
+      age: 40,
+      address: 'London Park',
+    }, {
+      key: '2',
+      name: 'Ethan',
+      age: 40,
+      address: 'London Park',
+    }, {
+      key: '2',
+      name: 'Ethan',
+      age: 40,
+      address: 'London Park',
+    }, {
+      key: '2',
+      name: 'Ethan',
+      age: 40,
+      address: 'London Park',
+    },
+    // Add more data as needed...
+  ];
+
   const { styles } = useStyle();
+  
   return (
-    <Table
-      bordered
-      className={styles.customTable}
-      columns={columns}
-      dataSource={dataSource}
-      scroll={{
-        x: 'max-content',
-      }}
-      pagination={false}
-    />
+    <>
+      <section style={{ margin: '10px', backgroundColor: 'white', borderRadius: '8px', padding: '5px' }}>
+        <TextField
+          label="Search"
+          variant="outlined"
+          value={search}
+          onChange={handleSearchChange}
+          style={{ marginTop: '15px', width: '100%' }}
+          InputProps={{
+            readOnly:true,
+            startAdornment: (
+              <InputAdornment position="start" style={{ display: 'flex', gap: '10px' }}>
+                <DatePicker
+                  style={{ width: '500px' }}
+                  label="DOF"
+                  value={date}
+                  onChange={handleDateChange}
+                />
+                <Input onChange={() => {}} placeholder="AeroDep" style={{ marginLeft: '10px' }} />
+                <Input onChange={() => {}} placeholder="AeroDes" style={{ marginLeft: '10px' }} />
+                <Input onChange={() => {}} placeholder="Aircraft" style={{ marginLeft: '10px' }} />
+              </InputAdornment>
+            ),
+          }}
+        />
+      </section>
+      
+      <main style={{ padding: '5px', backgroundColor: 'white', borderRadius: '8px', margin: '10px' }}>
+        <div style={{ paddingLeft: '15px', fontWeight: 'bold' }}>FPL Table</div>
+        <Table
+          style={{
+            margin: '10px',
+            boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19)',
+            borderRadius: '8px',
+          }}
+          className={styles.customTable}
+          columns={columns}
+          dataSource={dataSource}
+          scroll={{ x: 'max-content' }}
+          pagination={false}
+        />
+      </main>
+      
+      <ModalComponent open={open} setOpen={setOpen} />
+    </>
   );
 };
+
 export default HomePage;

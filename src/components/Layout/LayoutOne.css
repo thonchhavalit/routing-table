@@ -12,6 +12,7 @@
   overflow-y: auto;
   z-index: 100;
 }
+
 .row {
   display: flex;
   height: 100%;
@@ -31,6 +32,7 @@
 }
 
 .headerDark {
+  border-radius: 8px;
   width: 100%;
   position: relative;
   width: 100%;
@@ -40,6 +42,7 @@
   background-color: #535353;
   /* background-color: #0B2948; */
   z-index: 10;
+  top: 0;
   transition: 0s;
 }
 
@@ -61,6 +64,7 @@
   font-weight: 600;
   color: #1b0c80;
 }
+
 .billingManagementSystemDark {
   position: absolute;
   top: 28.33%;
@@ -97,6 +101,7 @@
   font-weight: 500;
   line-height: normal;
 }
+
 .profile-name-dark {
   color: #fff;
   font-family: Inter;
@@ -127,15 +132,18 @@
 
 .footer {
   background-color: #F5F5F5;
-  padding: 9px;
-  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  max-width: 99%;
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
   left: 0;
+  /* margin-top: 100vh; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
+  border-radius: 8px;
 }
 
 .parent-main {
@@ -156,24 +164,25 @@
   align-items: center;
   margin-right: 10px
 }
-.layoutbody .row .menu svg{
+
+/* .layoutbody .row .menu svg{
   width: 1.8em;
   height: 1.8em;
-}
+} */
 
-.card-icon svg{
+.card-icon svg {
   height: 1em;
   width: 1em;
 }
 
 
-.bk-icon{
+.bk-icon {
   background-color: #FFD05B;
   border-radius: 25px;
   padding: 2px;
 }
 
-.bk-icon-blue{
+.bk-icon-blue {
   background-color: #386895;
   border-radius: 25px;
   padding: 2px;

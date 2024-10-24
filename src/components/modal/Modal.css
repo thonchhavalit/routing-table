@@ -1,0 +1,96 @@
+.modal {
+    height: 100vh !important;
+    overflow-y: hidden;
+    width: 100% !important;
+}
+
+.container {
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-between !important;
+}
+
+
+.mainClass {
+    width: 900px;
+}
+
+.condition {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inputRow {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.messageDetail {
+    height: 200px;
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.messageArea {
+    width: 100%;
+    /* height: 200px;  */
+    height: 150px !important;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: none;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.messageArea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.wayPointTable {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.asideClass {
+    width: 450px;
+}
+
+.inputAdornment {
+    display: flex;
+    margin-top: 0;
+    justify-content: right;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+    top: 0 !important;
+}
+
+.inputField {
+    width: 250px;
+    /* padding: 8px; */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
